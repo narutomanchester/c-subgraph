@@ -1,0 +1,115 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: BookManager
+    network: base
+    source:
+      abi: BookManager
+      address: "0x382CCccbD3b142D7DA063bF68cd0c89634767F76"
+      startBlock: 14528050
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Book
+        - Depth
+        - OrderIndex
+        - OpenOrder
+        - ChartLog
+        - LatestBlock
+      abis:
+        - name: BookManager
+          file: ./abis/BookManager.json
+        - name: Controller
+          file: ./abis/Controller.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+        - name: Multicall3
+          file: ./abis/Multicall3.json
+      eventHandlers:
+        - event: Open(indexed uint192,indexed address,indexed
+            address,uint64,uint24,uint24,address)
+          handler: handleOpen
+        - event: Make(indexed uint192,indexed address,int24,uint256,uint64,address)
+          handler: handleMake
+        - event: Take(indexed uint192,indexed address,int24,uint64)
+          handler: handleTake
+        - event: Cancel(indexed uint256,uint64)
+          handler: handleCancel
+        - event: Claim(indexed uint256,uint64)
+          handler: handleClaim
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      blockHandlers:
+        - handler: handleBlock
+      file: ./src/book-manager.ts
+  - kind: ethereum
+    name: Rebalancer
+    network: base
+    source:
+      abi: Rebalancer
+      address: "0xd5133d8EC4b5656F1922C2b28BB44e1d18883959"
+      startBlock: 21499030
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - PoolVolume
+      abis:
+        - name: Rebalancer
+          file: ./abis/Rebalancer.json
+        - name: SimpleOracleStrategy
+          file: ./abis/SimpleOracleStrategy.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+        - name: Multicall3
+          file: ./abis/Multicall3.json
+        - name: Controller
+          file: ./abis/Controller.json
+      eventHandlers:
+        - event: Claim(indexed bytes32,uint256,uint256)
+          handler: handleRebalancerClaim
+      file: ./src/pool.ts
+  - kind: ethereum
+    name: SimpleOracleStrategy
+    network: base
+    source:
+      abi: SimpleOracleStrategy
+      address: "0x3bEd0daF59a0A6FC8D2aEfff015600641C4eD952"
+      startBlock: 21499050
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - PoolSnapshot
+      abis:
+        - name: Rebalancer
+          file: ./abis/Rebalancer.json
+        - name: SimpleOracleStrategy
+          file: ./abis/SimpleOracleStrategy.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+        - name: Multicall3
+          file: ./abis/Multicall3.json
+      eventHandlers:
+        - event: UpdatePosition(indexed bytes32,uint256,int24,int24,uint256)
+          handler: handleUpdatePosition
+      file: ./src/pool.ts
