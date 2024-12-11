@@ -7,8 +7,8 @@ dataSources:
     network: base
     source:
       abi: BookManager
-      address: "0x382CCccbD3b142D7DA063bF68cd0c89634767F76"
-      startBlock: 14528050
+      address: "0xE25611C8aa0A7cEA49fE099d26bf56f720d57874"
+      startBlock: 90935307
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -56,8 +56,8 @@ dataSources:
     network: base
     source:
       abi: Rebalancer
-      address: "0xd5133d8EC4b5656F1922C2b28BB44e1d18883959"
-      startBlock: 21499030
+      address: "0x7a526046c6eAE6879bcB72E6022f72c15A824063"
+      startBlock: 90966957
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -88,8 +88,8 @@ dataSources:
     network: base
     source:
       abi: SimpleOracleStrategy
-      address: "0x3bEd0daF59a0A6FC8D2aEfff015600641C4eD952"
-      startBlock: 21499050
+      address: "0xb20E099c1D8ADEd5bd915909fB4D51e0c9E8a0c0"
+      startBlock: 91047352
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
