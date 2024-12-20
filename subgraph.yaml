@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: BookManager
-    network: base
+    network: localhost
     source:
       abi: BookManager
-      address: "0xE25611C8aa0A7cEA49fE099d26bf56f720d57874"
-      startBlock: 90935307
+      address: "0xAA9575d63dFC224b9583fC303dB3188C08d5C85A"
+      startBlock: 87385460
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -53,11 +53,11 @@ dataSources:
       file: ./src/book-manager.ts
   - kind: ethereum
     name: Rebalancer
-    network: base
+    network: localhost
     source:
       abi: Rebalancer
-      address: "0x7a526046c6eAE6879bcB72E6022f72c15A824063"
-      startBlock: 90966957
+      address: "0x30b4e9215322B5d0c290249126bCf96C2Ca8e948"
+      startBlock: 91355350
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -85,11 +85,11 @@ dataSources:
       file: ./src/pool.ts
   - kind: ethereum
     name: SimpleOracleStrategy
-    network: base
+    network: localhost
     source:
       abi: SimpleOracleStrategy
-      address: "0xb20E099c1D8ADEd5bd915909fB4D51e0c9E8a0c0"
-      startBlock: 91047352
+      address: "0x540488b54c8DE6e44Db7553c3A2C4ABEb09Fc69C"
+      startBlock: 91355490
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

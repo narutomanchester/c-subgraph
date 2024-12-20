@@ -12,20 +12,21 @@ const ZKSYNC_ERA_SEPOLIA = BigInt.fromI32(300)
 const SONIC_TESTNET = BigInt.fromI32(64165)
 
 export function getChainId(): BigInt {
-  const multiCall = Multicall3.bind(Address.fromString(MULTICALL3_ADDRESS))
-  const chainId = multiCall.try_getChainId()
-  if (chainId.reverted) {
-    const multiCallFallback = Multicall3.bind(
-      Address.fromString(MULTICALL3_FALLBACK_ADDRESS),
-    )
-    const chainIdFallback = multiCallFallback.try_getChainId()
-    if (chainIdFallback.reverted) {
-      return BigInt.fromI32(0)
-    } else {
-      return chainIdFallback.value
-    }
-  }
-  return chainId.value
+  
+  // const multiCall = Multicall3.bind(Address.fromString(MULTICALL3_ADDRESS))
+  // const chainId = multiCall.try_getChainId()
+  // if (chainId.reverted) {
+  //   const multiCallFallback = Multicall3.bind(
+  //     Address.fromString(MULTICALL3_FALLBACK_ADDRESS),
+  //   )
+  //   const chainIdFallback = multiCallFallback.try_getChainId()
+  //   if (chainIdFallback.reverted) {
+  //     return BigInt.fromI32(0)
+  //   } else {
+  //     return chainIdFallback.value
+  //   }
+  // }
+  return BigInt.fromI32(64165)
 }
 
 export function getControllerAddress(): string {
@@ -33,7 +34,7 @@ export function getControllerAddress(): string {
   if (chainId == ARBITRUM_SEPOLIA) {
     return '0x6e7CC9b243fdcD152939Df2E090EDcDcf5df7356'
   } else if (chainId == SONIC_TESTNET) {
-    return '0xba1900a9F14Aa0b1d7066AF312A27d16Cf36adEf'
+    return '0xAEB670cDba6094C30cbA3c88DCBBA6F6d37F6032'
   }else if (chainId == BASE) {
     return '0xA694fDd88E7FEE1f5EBF878153B68ADb2ce6EbbF'
   } else if (chainId == BERA_TESTNET) {
@@ -52,7 +53,7 @@ export function getRebalancerAddress(): string {
   if (chainId == ARBITRUM_SEPOLIA) {
     return '0x30b4e9215322B5d0c290249126bCf96C2Ca8e948'
   } else if (chainId == SONIC_TESTNET) {
-    return '0x7a526046c6eAE6879bcB72E6022f72c15A824063'
+    return '0x4e4dDa36B8bBA1b4aF776bA881347c17CDAC2085'
   } else if (chainId == BASE) {
     return '0x13f2Ff6Cc952f4181D6c316426e9CbdA957c6482'
   } else if (chainId == BERA_TESTNET) {
@@ -71,7 +72,7 @@ export function getSimpleOracleStrategyAddress(): string {
   if (chainId == ARBITRUM_SEPOLIA) {
     return '0x540488b54c8DE6e44Db7553c3A2C4ABEb09Fc69C'
   } else if (chainId == SONIC_TESTNET) {
-    return '0xb20E099c1D8ADEd5bd915909fB4D51e0c9E8a0c0'
+    return '0x7a526046c6eAE6879bcB72E6022f72c15A824063'
   } else if (chainId == BASE) {
     return '0x284A7A4c8Bc2873EDCa149809C1CAaaf3C4ED6eb'
   } else if (chainId == BERA_TESTNET) {

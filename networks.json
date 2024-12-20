@@ -46,23 +46,23 @@
   "sonic-testnet": {
     "BookManager": {
       "address": "0xE25611C8aa0A7cEA49fE099d26bf56f720d57874",
-      "startBlock": 90935307
+      "startBlock": 5237257
     },
     "BookViewer": {
-      "address": "0x676d282c50B922982e2d52aE6e6d52a708e86DdC",
-      "startBlock": 90958796
+      "address": "0x91C8275391c7fe004783f6202495771F97B7c988",
+      "startBlock": 5237756
     },
     "Controller": {
-      "address": "0xba1900a9F14Aa0b1d7066AF312A27d16Cf36adEf",
-      "startBlock": 90959110
+      "address": "0xAEB670cDba6094C30cbA3c88DCBBA6F6d37F6032",
+      "startBlock": 5237889
     },
     "Rebalancer": {
-      "address": "0x7a526046c6eAE6879bcB72E6022f72c15A824063",
-      "startBlock": 90966957
+      "address": "0x4e4dDa36B8bBA1b4aF776bA881347c17CDAC2085",
+      "startBlock": 5263411
     },
     "SimpleOracleStrategy": {
-      "address": "0xb20E099c1D8ADEd5bd915909fB4D51e0c9E8a0c0",
-      "startBlock": 91047352
+      "address": "0x4102079bA80e5a473c93003240A73dA7b4a2f38B",
+      "startBlock": 5268139
     }
   },
   "base": {
