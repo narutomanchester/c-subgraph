@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: BookManager
-    network: localhost
+    network: sonic-testnet
     source:
       abi: BookManager
-      address: "0xAA9575d63dFC224b9583fC303dB3188C08d5C85A"
-      startBlock: 87385460
+      address: "0xE25611C8aa0A7cEA49fE099d26bf56f720d57874"
+      startBlock: 5237257
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -53,11 +53,11 @@ dataSources:
       file: ./src/book-manager.ts
   - kind: ethereum
     name: Rebalancer
-    network: localhost
+    network: sonic-testnet
     source:
       abi: Rebalancer
-      address: "0x30b4e9215322B5d0c290249126bCf96C2Ca8e948"
-      startBlock: 91355350
+      address: "0x4e4dDa36B8bBA1b4aF776bA881347c17CDAC2085"
+      startBlock: 5263411
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -85,11 +85,11 @@ dataSources:
       file: ./src/pool.ts
   - kind: ethereum
     name: SimpleOracleStrategy
-    network: localhost
+    network: sonic-testnet
     source:
       abi: SimpleOracleStrategy
-      address: "0x540488b54c8DE6e44Db7553c3A2C4ABEb09Fc69C"
-      startBlock: 91355490
+      address: "0x4102079bA80e5a473c93003240A73dA7b4a2f38B"
+      startBlock: 5268139
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

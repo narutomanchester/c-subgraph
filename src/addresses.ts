@@ -9,7 +9,7 @@ const BASE = BigInt.fromI32(8453)
 const BERA_TESTNET = BigInt.fromI32(80084)
 const ZKSYNC_ERA = BigInt.fromI32(324)
 const ZKSYNC_ERA_SEPOLIA = BigInt.fromI32(300)
-const SONIC_TESTNET = BigInt.fromI32(64165)
+const SONIC_TESTNET = BigInt.fromI32(57054)
 
 export function getChainId(): BigInt {
   
@@ -26,7 +26,7 @@ export function getChainId(): BigInt {
   //     return chainIdFallback.value
   //   }
   // }
-  return BigInt.fromI32(64165)
+  return BigInt.fromI32(57054)
 }
 
 export function getControllerAddress(): string {
