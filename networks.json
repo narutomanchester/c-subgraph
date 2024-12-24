@@ -65,6 +65,20 @@
       "startBlock": 5268139
     }
   },
+  "mantle-speolia": {
+    "BookManager": {
+      "address": "0x42dDc15503bfE786F2A624a4E4289cb1Fe446651",
+      "startBlock": 16668484
+    },
+    "BookViewer": {
+      "address": "0x6Aba77e7CdC65623F6f22937958D355c73aF3d35",
+      "startBlock": 13952702      
+    },
+    "Controller": {
+      "address": "0x6e7CC9b243fdcD152939Df2E090EDcDcf5df7356",
+      "startBlock": 15252677
+    }
+  },
   "base": {
     "BookManager": {
       "address": "0x382CCccbD3b142D7DA063bF68cd0c89634767F76",
