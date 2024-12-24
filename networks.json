@@ -43,7 +43,7 @@
       "startBlock": 91355490
     }
   },
-  "sonic-testnet": {
+  "sonic-blaze": {
     "BookManager": {
       "address": "0xE25611C8aa0A7cEA49fE099d26bf56f720d57874",
       "startBlock": 5237257

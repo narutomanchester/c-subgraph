@@ -10,6 +10,7 @@ const BERA_TESTNET = BigInt.fromI32(80084)
 const ZKSYNC_ERA = BigInt.fromI32(324)
 const ZKSYNC_ERA_SEPOLIA = BigInt.fromI32(300)
 const SONIC_TESTNET = BigInt.fromI32(57054)
+const MANTLE_SEPOLIA = BigInt.fromI32(5003)
 
 export function getChainId(): BigInt {
   
@@ -26,7 +27,7 @@ export function getChainId(): BigInt {
   //     return chainIdFallback.value
   //   }
   // }
-  return BigInt.fromI32(57054)
+  return BigInt.fromI32(5003)
 }
 
 export function getControllerAddress(): string {
@@ -43,6 +44,8 @@ export function getControllerAddress(): string {
     return '0x9aF80CC61AAd734604f139A53E22c56Cdbf9a158'
   } else if (chainId == ZKSYNC_ERA_SEPOLIA) {
     return '0xA253A7c6C26E0a6E7eAbaAbCD8b1cD43A2468c48'
+  } else if (chainId == MANTLE_SEPOLIA) {
+    return '0x1A0E22870dE507c140B7C765a04fCCd429B8343F'
   } else {
     return '0x6e7CC9b243fdcD152939Df2E090EDcDcf5df7356'
   }
@@ -60,6 +63,8 @@ export function getRebalancerAddress(): string {
     return '0x7d06c636bA86BD1fc2C38B11F1e5701145CABc30'
   } else if (chainId == ZKSYNC_ERA) {
     return '0x9aF80CC61AAd734604f139A53E22c56Cdbf9a158'
+  } else if (chainId == MANTLE_SEPOLIA) {
+    return '0x1A0E22870dE507c140B7C765a04fCCd429B8343F'
   } else if (chainId == ZKSYNC_ERA_SEPOLIA) {
     return '0xA253A7c6C26E0a6E7eAbaAbCD8b1cD43A2468c48'
   } else {
@@ -77,6 +82,8 @@ export function getSimpleOracleStrategyAddress(): string {
     return '0x284A7A4c8Bc2873EDCa149809C1CAaaf3C4ED6eb'
   } else if (chainId == BERA_TESTNET) {
     return '0x7d06c636bA86BD1fc2C38B11F1e5701145CABc30'
+  } else if (chainId == MANTLE_SEPOLIA) {
+    return '0x1A0E22870dE507c140B7C765a04fCCd429B8343F'
   } else if (chainId == ZKSYNC_ERA) {
     return '0x9aF80CC61AAd734604f139A53E22c56Cdbf9a158'
   } else if (chainId == ZKSYNC_ERA_SEPOLIA) {
