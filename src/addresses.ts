@@ -45,9 +45,9 @@ export function getControllerAddress(): string {
   } else if (chainId == ZKSYNC_ERA_SEPOLIA) {
     return '0xA253A7c6C26E0a6E7eAbaAbCD8b1cD43A2468c48'
   } else if (chainId == MANTLE_SEPOLIA) {
-    return '0x1A0E22870dE507c140B7C765a04fCCd429B8343F'
+    return '0x46fbe4bf4dc4a862cdf13781D421546Ab378C113'
   } else {
-    return '0x6e7CC9b243fdcD152939Df2E090EDcDcf5df7356'
+    return '0x46fbe4bf4dc4a862cdf13781D421546Ab378C113'
   }
 }
 

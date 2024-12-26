@@ -8,7 +8,7 @@
     "remove-local": "graph remove --node http://34.87.64.105:8000/ v2-core-subgraph",
     "deploy-local": "graph deploy --node http://34.87.64.105:8000/ --ipfs http://34.87.64.105:5001 v2-core-subgraph --network localhost",
     "create-sonic": "graph create --node http://34.87.64.105:8000/ v2-core-subgraph",
-    "deploy-mantle-sepolia": " $ graph deploy v2-core-subgraph --node https://subgraph-api.mantle.xyz/deploy --ipfs https://subgraph-api.mantle.xyz/ipfs --deploy-key %DEPLOY_KEY%",
+    "deploy-mantle-sepolia": "graph deploy v2-core-subgraph --node https://subgraph-api.mantle.xyz/deploy --ipfs https://subgraph-api.mantle.xyz/ipfs --deploy-key %DEPLOY_KEY%",
     "deploy-sonic": "graph deploy --node http://34.87.64.105:8000/ --ipfs http://34.87.64.105:5001 v2-core-subgraph --network sonic-testnet",
     "deploy-sonic-alchemy": "graph deploy sonic-testnet --version-label v0.0.1 --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key %DEPLOY_KEY% --ipfs https://ipfs.satsuma.xyz --network sonic-testnet",
     "deploy-arbitrum": "dotenv -e .env -- cross-var graph deploy v2-core-subgraph --version-label %DEPLOY_VERSION% --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key %DEPLOY_KEY% --ipfs https://ipfs.satsuma.xyz --network arbitrum-sepolia",
